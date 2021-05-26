@@ -1,10 +1,6 @@
-console.log('hello')
-
 const source = document.getElementById('source')
 const themesBad = document.getElementById('themes-bad')
 const themesGood = document.getElementById('themes-good')
-
-
 
 let getThemes = (textArea) => {
     let getTheme = (string) => {
@@ -44,13 +40,12 @@ let checkThemes = (arrThemes) => {
 }
 
 source.addEventListener('change', () => {
-    let themes = getThemes(source)
-    
-    let {good, bad} = checkThemes(themes)
-
-    console.log(bad)
-
-    printThemes(themesBad, bad)
-    printThemes(themesGood, joinTemplates(good))
+    if (source.value !== '') {
+        let themes = getThemes(source)
+        let {good, bad} = checkThemes(themes)
+        
+        printThemes(themesBad, bad)
+        printThemes(themesGood, joinTemplates(good))
+    }
 })
 

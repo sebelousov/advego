@@ -5,12 +5,12 @@ html, body {
 }
 
 h1 {
-    color: grey;
+    color: #8b00ff;
     font-size: 2rem;
 }
 
 h2 {
-    color: grey;
+    color: #8b00ff;
     font-size: 1.5rem;
 }
 
@@ -18,9 +18,14 @@ textarea {
     width: 80%;
     height: 5rem;
     margin: 10px;
-    border: none;
+    border: 1px solid #8b00ff;
     border-radius: 0.5rem;
     box-sizing: border-box;
+}
+
+textarea:focus {
+    /* border: 1px solid #8b00ff; */
+    outline-color: #fff;
 }
 
 .container {
